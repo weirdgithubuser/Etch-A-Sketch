@@ -30,3 +30,9 @@ for (let i = 0; i < 16*16; i++){
     childDiv.style.height = `${((parentDiv.offsetHeight)/16)}px`;
     parentDiv.appendChild(childDiv);
 }
+
+document.querySelectorAll(".childDiv").forEach((square) => {
+    square.addEventListener("mouseenter", (event) => {
+        event.target.style['background-color'] = 'pink';
+    });
+})
