@@ -1,6 +1,25 @@
 button = document.querySelector('.user-input-button');
+input = document.querySelector('.user-input-input');
 button.addEventListener('click',(event) => {
     event.preventDefault();
+    if (input.value !== ""){
+        if(input.value > 0 && input.value <= 60){
+        let dimension = input.value;
+        input.value = "";
+        childDivNodeList = document.querySelectorAll(".childDiv");
+        childDivNodeList.forEach((item) => {
+            item.parentNode.removeChild(item);
+        })
+        for (let i = 0; i < dimension*dimension; i++){
+        childDiv = document.createElement('div');
+        childDiv.classList.add("childDiv");
+        childDiv.style.width = `${((parentDiv.offsetWidth)/dimension)}px`;
+        childDiv.style.height = `${((parentDiv.offsetHeight)/dimension)}px`;
+        parentDiv.appendChild(childDiv);
+    }}else{
+        alert("Are you retarded? I just said limit = 60");
+    }
+}
 })
 
 parentDiv = document.querySelector("#container");
