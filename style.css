@@ -1,0 +1,28 @@
+body{
+    display: flex;
+    align-content: center;
+    flex-flow: column wrap;
+}
+
+.user-input{
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 5px;
+}
+
+.user-input-label,
+.user-input-input{
+    margin-right: 10px;
+}
+
+#container{
+    display: flex;
+    flex-flow: row wrap;
+    height: 420px;
+    width: 420px;
+    background-color: rgb(206, 235, 255);
+}
+
+.childDiv{
+    background-color: blue;
+}
