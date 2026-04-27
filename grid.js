@@ -16,6 +16,10 @@ button.addEventListener('click',(event) => {
         childDiv.style.width = `${((parentDiv.offsetWidth)/dimension)}px`;
         childDiv.style.height = `${((parentDiv.offsetHeight)/dimension)}px`;
         parentDiv.appendChild(childDiv);
+        document.querySelectorAll(".childDiv").forEach((square) => {
+        square.addEventListener("mouseenter", (event) => {
+        event.target.style['background-color'] = 'hotpink';});
+    })
     }}else{
         alert("Are you retarded? I just said limit = 60");
     }
@@ -33,6 +37,6 @@ for (let i = 0; i < 16*16; i++){
 
 document.querySelectorAll(".childDiv").forEach((square) => {
     square.addEventListener("mouseenter", (event) => {
-        event.target.style['background-color'] = 'pink';
+        event.target.style['background-color'] = 'hotpink';
     });
 })
